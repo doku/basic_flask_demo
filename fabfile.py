@@ -53,7 +53,7 @@ def deploy():
 
 
 
-def basicapp():
+def lab9():
     env.warn_only = True
     #time.sleep(3)
     check1 = run('curl 127.0.0.1:5000')
@@ -62,10 +62,10 @@ def basicapp():
         print("127.0.0.1:5000 is not up")
     else:
         print("127.0.0.1:5000 is up")
-    if "basicapp.py" in run("ps a"):
-        print("basicapp.py is in process")
+    if "lab9.py" in run("ps a"):
+        print("lab9.py is in process")
     else:
-        print("basicapp.py is not in processes")
+        print("lab9.py is not in processes")
 
 
 def uwsgi():
@@ -78,7 +78,7 @@ def uwsgi():
         print("uwsgi is running in processes")
     else:
         print("uwsgi is not running in processes")
-    if "no app loaded" in sudo("tailj -n 15 /var/log/uwsgi/app/uwsgi.log"):
+    if "no app loaded" in sudo("tail -n 15 /var/log/uwsgi/app/uwsgi.log"):
         print("The term 'no app loaded' appeared in uwsgi.log")
 
 
