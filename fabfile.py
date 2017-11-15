@@ -9,16 +9,16 @@ env.host={'localhost'}
 
 env.roledefs = {
     'check': ['localhost'],
-
+    'remote': ['127.0.0.1'],
 }
 
 def setup():
     sudo('apt install virtualenv git')
-    run('mkdir /opt/basicapp/')
+    run('mkdir /opt/lab9/')
 
 def virtualenv_setup():
-    sudo('chown $USER:www-data /opt/basicapp/')
-    run('cd /opt/basicapp')
+    sudo('chown $USER:www-data /opt/lab9/')
+    run('cd /opt/lab9/')
     run('virtualenv venv')
     run('source venv/bin/activate')
 
