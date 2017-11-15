@@ -1,4 +1,4 @@
-from basicapp import app
+from lab9 import app
 
 
 if __name__ == "__main__":
